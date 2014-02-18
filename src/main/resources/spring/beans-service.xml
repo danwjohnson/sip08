@@ -17,6 +17,7 @@ Code: https://github.com/springinpractice
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:jee="http://www.springframework.org/schema/jee"
 	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:task="http://www.springframework.org/schema/task"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:util="http://www.springframework.org/schema/util"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -27,6 +28,8 @@ Code: https://github.com/springinpractice
 		http://www.springframework.org/schema/context/spring-context-3.1.xsd
 		http://www.springframework.org/schema/jee
 		http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+		http://www.springframework.org/schema/task
+		http://www.springframework.org/schema/task/spring-task-3.1.xsd
 		http://www.springframework.org/schema/tx
 		http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
 		http://www.springframework.org/schema/util
@@ -66,4 +69,8 @@ Code: https://github.com/springinpractice
 		p:resourceLoaderPath="classpath:/velocity/" />
 
 	<util:properties id="contactServiceProps" location="classpath:/spring/contactService.properties" />
+
+	<task:annotation-driven />
+	<task:executor id="userMessageExecutor" pool-size="5-10" queue-capacity="100" keep-alive="300" />
+
 </beans>
