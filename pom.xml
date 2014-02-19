@@ -25,12 +25,12 @@ Code: https://github.com/springinpractice
 		<version>1.0-RELEASE</version>
 	</parent>
 
-	<artifactId>com.springinpractice.08_04</artifactId>
+	<artifactId>com.springinpractice.08_05</artifactId>
 	<packaging>war</packaging>
 
-	<name>Spring in Practice Recipe 8.4</name>
+	<name>Spring in Practice Recipe 8.5</name>
 	<description>
-		Recipe 8.4 shows how to implement mailing list subscription and unsubscription.
+		We add support for an RSS feed in recipe 8.5.
 	</description>
 	<url>http://springinpractice.com/</url>
 
@@ -64,6 +64,10 @@ Code: https://github.com/springinpractice
 			<type>war</type>
 		</dependency>
 		<dependency>
+			<groupId>com.sun.syndication</groupId>
+			<artifactId>com.springsource.com.sun.syndication</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
 		</dependency>
@@ -88,4 +92,4 @@ Code: https://github.com/springinpractice
 			</plugin>
 		</plugins>
 	</build>
-</project>
+</project></project>
